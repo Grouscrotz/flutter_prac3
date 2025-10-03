@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,9 +22,6 @@ class MyApp extends StatelessWidget {
 
 class NameScreen extends StatefulWidget {
   const NameScreen({super.key, required this.title});
-
-
-
   final String title;
 
   @override
@@ -38,7 +34,7 @@ class _NameScreenState extends State<NameScreen> {
   void toClassScreen() {
     String name = _controller.text;
     Navigator.push(context, MaterialPageRoute(
-      builder: (context) => ClassScreen(name: name),
+      builder: (context) {return ClassScreen(name: name); },
     ));
   }
 

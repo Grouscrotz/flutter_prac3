@@ -8,7 +8,7 @@ class WeaponScreen extends StatelessWidget {
 
   void goToStatsScreen(BuildContext context, String chosenClass, String chosenWeapon) {
     Navigator.push(context, MaterialPageRoute(
-      builder: (context) => StatsScreen(name: name, chosenClass: chosenClass, chosenWeapon: chosenWeapon, ),
+      builder: (context) { return StatsScreen(name: name, chosenClass: chosenClass, chosenWeapon: chosenWeapon, );},
     ));
   }
 
@@ -25,7 +25,7 @@ class WeaponScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 30,),
-            Text("Отлично! Теперь тебе стоит подумать о том, с чем ты будешь сражаться! Но выбирай оружие с умом.",
+            Text(" Отлично! Теперь тебе стоит подумать о том, с чем ты будешь сражаться! Но выбирай оружие с умом.",
               style: TextStyle(fontSize:14),
               softWrap: true,),
             SizedBox(width: 100, height: 100),
@@ -36,17 +36,17 @@ class WeaponScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () => goToStatsScreen(context, chosenClass, "Меч"),
+                  onPressed: () { return goToStatsScreen(context, chosenClass, "Меч");},
                   child: Text("Меч"),
                 ),
                 SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () => goToStatsScreen(context,chosenClass, "Лук"),
+                  onPressed: () { return goToStatsScreen(context,chosenClass, "Лук");},
                   child: Text("Лук"),
                 ),
                 SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () => goToStatsScreen(context,chosenClass, "Посох"),
+                  onPressed: () { return goToStatsScreen(context,chosenClass, "Посох");},
                   child: Text("Посох"),
                 ),
               ],

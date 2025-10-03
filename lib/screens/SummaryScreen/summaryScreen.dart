@@ -27,21 +27,27 @@ class SummaryScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Поздравляем, $name!", style: TextStyle(fontSize: 24)),
             SizedBox(height: 20),
-            Text("Класс: $chosenClass", style: TextStyle(fontSize: 20)),
-            Text("Оружие: $chosenWeapon", style: TextStyle(fontSize: 20)),
+            Center(child: Text("Поздравляем, $name!", style: TextStyle(fontSize: 24))),
             SizedBox(height: 20),
-            Text("Характеристики:", style: TextStyle(fontSize: 22)),
-            SizedBox(height: 10),
-            Text("Сила: $strength", style: TextStyle(fontSize: 18)),
-            Text("Ловкость: $agility", style: TextStyle(fontSize: 18)),
-            Text("Интеллект: $intelligence", style: TextStyle(fontSize: 18)),
+            Center(
+                child: Column(
+                    children: [
+                      Text("Класс: $chosenClass", style: TextStyle(fontSize: 20)),
+                      Text("Оружие: $chosenWeapon", style: TextStyle(fontSize: 20))])),
+            SizedBox(height: 20),
+            Center(child: Text("Характеристики:", style: TextStyle(fontSize: 22))),
+            Center(
+                child:Column(
+                    children: [
+                      Text("Сила: $strength", style: TextStyle(fontSize: 18)),
+                      Text("Ловкость: $agility", style: TextStyle(fontSize: 18)),
+                      Text("Интеллект: $intelligence", style: TextStyle(fontSize: 18))])),
             SizedBox(height: 40),
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.popUntil(context, (route) => route.isFirst);
+                  Navigator.popUntil(context, (route) {return route.isFirst;});
                 },
                 child: Text("Завершить и вернуться в начало"),
               ),

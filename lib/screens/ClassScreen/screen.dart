@@ -7,7 +7,7 @@ class ClassScreen extends StatelessWidget {
 
   void goToWeaponScreen(BuildContext context, String chosenClass) {
     Navigator.push(context, MaterialPageRoute(
-      builder: (context) => WeaponScreen(name: name, chosenClass: chosenClass ),
+      builder: (context) { return WeaponScreen(name: name, chosenClass: chosenClass);}
     ));
   }
 
@@ -31,17 +31,17 @@ class ClassScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () => goToWeaponScreen(context, "Воин"),
+                  onPressed: () { return goToWeaponScreen(context, "Воин");},
                   child: Text("Воин"),
                 ),
                 SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () => goToWeaponScreen(context, "Лучник"),
+                  onPressed: () { return goToWeaponScreen(context, "Лучник");},
                   child: Text("Лучник"),
                 ),
                 SizedBox(width: 10),
                 ElevatedButton(
-                  onPressed: () => goToWeaponScreen(context, "Маг"),
+                  onPressed: () { return goToWeaponScreen(context, "Маг");},
                   child: Text("Маг"),
                 ),
               ],
@@ -51,5 +51,4 @@ class ClassScreen extends StatelessWidget {
       ),
     );
   }
-
 }

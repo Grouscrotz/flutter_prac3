@@ -68,9 +68,9 @@ class _StatsScreenState extends State<StatsScreen> {
               children: [
                 Text("Сила: $strength", style: TextStyle(fontSize: 18)),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => addPoint("Сила"), child: Text("+")),
+                ElevatedButton(onPressed: () { return addPoint("Сила");}, child: Text("+")),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => deletePoint("Сила"), child: Text("-"))
+                ElevatedButton(onPressed: () { return deletePoint("Сила");}, child: Text("-"))
               ],
             ),
             SizedBox(height: 10),
@@ -79,9 +79,9 @@ class _StatsScreenState extends State<StatsScreen> {
               children: [
                 Text("Ловкость: $agility", style: TextStyle(fontSize: 18)),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => addPoint("Ловкость"), child: Text("+")),
+                ElevatedButton(onPressed: () { return addPoint("Ловкость");}, child: Text("+")),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => deletePoint("Ловкость"), child: Text("-"))
+                ElevatedButton(onPressed: () { return deletePoint("Ловкость");}, child: Text("-"))
               ],
             ),
             SizedBox(height: 10),
@@ -90,9 +90,9 @@ class _StatsScreenState extends State<StatsScreen> {
               children: [
                 Text("Интеллект: $intelligence", style: TextStyle(fontSize: 18)),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => addPoint("Интеллект"), child: Text("+")),
+                ElevatedButton(onPressed: () { return addPoint("Интеллект");}, child: Text("+")),
                 SizedBox(width: 10),
-                ElevatedButton(onPressed: () => deletePoint("Интеллект"), child: Text("-"))
+                ElevatedButton(onPressed: () { return deletePoint("Интеллект");}, child: Text("-"))
               ],
             ),
             SizedBox(height: 30),
